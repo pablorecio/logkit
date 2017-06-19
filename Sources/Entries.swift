@@ -101,15 +101,15 @@ public struct LXLogEntry {
 internal extension LXLogEntry {
 
     /// Returns the Log Entry as a dictionary.
-    internal func asMap() -> [String: AnyObject] {
+    internal func asMap() -> [String: Any] {
         return [
-            "logKitVersion": self.logKitVersion,
-            "message": self.message,
-            "userInfo": self.userInfo,
-            "level": self.level,
-            "timestamp": self.timestamp,
-            "dateTime": self.dateTime,
-            "functionName": self.functionName,
+            "logKitVersion": self.logKitVersion as AnyObject,
+            "message": self.message as AnyObject,
+            "userInfo": self.userInfo as AnyObject,
+            "level": self.level as AnyObject,
+            "timestamp": self.timestamp as AnyObject,
+            "dateTime": self.dateTime as AnyObject,
+            "functionName": self.functionName as AnyObject,
             "fileName": self.fileName,
             "filePath": self.filePath,
             "lineNumber": self.lineNumber,
